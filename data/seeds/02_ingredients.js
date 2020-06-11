@@ -1,13 +1,36 @@
 
 exports.seed = function(knex) {
-  // Deletes ALL existing entries
-  return knex('table_name').del()
-    .then(function () {
-      // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
-      ]);
-    });
+  return knex('ingredients').insert([
+    {
+      name: 'Chicken',
+      quantity: '0.5 lb',
+      recipe_id: 1
+    },
+    {
+      name: 'Hot Water',
+      quantity: '5 cups',
+      recipe_id: 1
+    },
+    {
+      name: 'Water',
+      quantity: '0.5 lb',
+      recipe_id: 1
+    },
+    {
+      name: 'Bread',
+      quantity: '1 slice',
+      recipe_id: 2
+    },
+    {
+      name: 'Cereal of Choice',
+      quantity: '1 Bowl',
+      recipe_id: 3
+    },
+    {
+      name: 'Milk of Choice',
+      quantity: 'Half of Bowl',
+      recipe_id: 3
+    }
+  ]);
 };
+
